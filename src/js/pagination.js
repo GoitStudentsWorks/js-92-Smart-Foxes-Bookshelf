@@ -18,11 +18,10 @@ function chunkArray(array, chunkSize) {
 const chunkedArray = chunkArray(shoppingList, itemsPerPage);
 const totalPages = Math.ceil(shoppingList.length / itemsPerPage);
 
-function createBtnMarkup(pageNumber) {
-    console.log(pageNumber);
+function createBtnMarkup (pageNumber) {
     const markup = `<button class="pagination-pages-btn"  data-page="${pageNumber}">
         <span class="pagination-pages-numbers">${pageNumber}</span></button>`;
-    paginationPages.insertAdjacentHTML('beforeend', markup);
+    paginationPages.insertAdjacentHTML('afterbegin', markup);
     const button = document.querySelector(`[data-page="${pageNumber}"]`);
     button.addEventListener('click', function () {
         currentPage = pageNumber;
@@ -50,15 +49,10 @@ function displayItems() {
 
 function createBtnPages() {
     if (shoppingList.length > itemsPerPage) {
-        for (let i = 1; i <= totalPages; i++) {
-           createBtnMarkup(i);
+        for (let i = 2; i <= totalPages; i++) {
+            createBtnMarkup(i);
         }
-      
     }
-    // else (shoppingList.length >= 0)
-    // {
-    //     createBtnMarkup(1);
-    // }
 }
 
 function checkShoppingList() {
@@ -73,8 +67,12 @@ function checkShoppingList() {
     }
  
 }
+
+
+
+
 checkShoppingList();
-// createBtnMarkup();
+createBtnMarkup(1);
 
 
 

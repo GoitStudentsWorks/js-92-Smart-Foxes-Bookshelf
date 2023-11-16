@@ -62,7 +62,6 @@
 
 .logo {
   display: flex;
-  height: 28px;
   align-items: center;
   position: relative;
   z-index: 20;
