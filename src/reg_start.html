@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Реєстрація</title>
+    <title>Bookshelf-Реєстрація</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,14 +18,13 @@
     <main class="container">
       <div id="myModal" class="modal">
         <div class="modal-content">
-          <button class="close" id="closeModalButton">
+          <a class="close" id="closeModalButton" href="./index.html">
             <svg class="close-form-icon" viewBox="0 0 32 32">
               <use href="./img/sprite.svg#icon-close"></use>
             </svg>
-          </button>
+          </a>
           <div class="form_container" id="form_content_container">
             <div class="form_content_inner_container">
-              <!-- Форма реєстрації -->
               <div class="registration_form" id="registration_form">
                 <input
                   type="text"
@@ -55,7 +54,6 @@
                   Registration
                 </button>
               </div>
-              <!-- Форма входу -->
               <div id="login_form" class="login_form" style="display: none">
                 <input
                   type="email"
@@ -72,9 +70,11 @@
                 <button class="form-button" id="loginButton">Log In</button>
                 <button id="googleSignInButton">Log in with Google</button>
               </div>
-              <!-- Перемикачі -->
-              <div class="toggle_buttons clicked" id="toggle_buttons">
-                <button class="register-toggle" id="showRegistrationFormButton">
+              <div class="toggle_buttons" id="toggle_buttons">
+                <button
+                  class="register-toggle clicked"
+                  id="showRegistrationFormButton"
+                >
                   Create a profile
                 </button>
                 <button class="login-toggle" id="showLoginFormButton">
@@ -84,11 +84,11 @@
             </div>
           </div>
         </div>
-      <!-- Скрипти для бази даних Firebase -->
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+      </div>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
     <script type="module" src="reg_start.js"></script>
   </body>
 </html>

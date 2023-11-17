@@ -1,4 +1,5 @@
 import { all } from 'axios';
+import Notiflix from 'notiflix';
 import { getTopBooks, getBooksByCategory } from './BOOKS_API';
 import { createModal } from './pop_up';
 
@@ -20,7 +21,7 @@ async function onLoad() {
     const categories = createCategories(topBooks.data);
     addCategoriesMarkup(categories);
   } catch (err) {
-    console.log(err);
+    Notiflix.Report.failure('OOPS! We have some problems🙊', err, 'Try again');
   }
 }
 
@@ -31,7 +32,7 @@ async function loadBack() {
     const categories = createCategories(topBooks.data);
     categoriesBook.innerHTML = categories;
   } catch (err) {
-    console.log(err);
+    Notiflix.Report.failure('OOPS! We have some problems🙊', err, 'Try again');
   }
 }
 
@@ -54,7 +55,7 @@ function createCategories(arr = []) {
         <ul class="categories-books-genre-all-books">
         ${createCard(books)}
         </ul>
-        <button class="categories-books-btn">see more</button>
+        <button class="categories-books-btn" data-category='${list_name}'>see more</button>
       </div>
       `;
     })
@@ -96,7 +97,7 @@ async function onSeeMore(event) {
   )} <span class="categories-books-title-accent">${lastWord.toString()}</span>`;
   categoriesBooksTitle.insertAdjacentHTML(
     'afterend',
-    '<button class="categories-books-back-btn">back to Best Sellers</button>'
+    '<button class="categories-books-back-btn " data-btn = "goBackBtn" >back to Best Sellers</button>'
   );
   try {
     const booksByGenre = await getBooksByCategory(seeMoreGenre);
@@ -105,7 +106,7 @@ async function onSeeMore(event) {
 
     addCardByGenre(allBooksByGenre);
   } catch (err) {
-    console.log(err);
+    Notiflix.Report.failure('OOPS! We have some problems🙊', err, 'Try again');
   }
 }
 

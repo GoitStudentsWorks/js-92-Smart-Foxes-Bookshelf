@@ -1,10 +1,10 @@
 import saveTheChildren from '../public/save_the_children.png';
 import projectHope from '../public/hope.png';
 import internationalMedical from '../public/international_medical.png';
-import razom from '../public/razom-alpha.png';
+import razom from '../public/razom.png';
 import actionAgainstHunger from '../public/action_against_hunger.png';
 import sergiyPrytula from '../public/sergiy_prytula.png';
-import medecinsSans from '../public/medical-alpha.png';
+import medecinsSans from '../public/medical.png';
 import worldVision from '../public/world_vision.png';
 import united24 from '../public/united_24.png';
 
@@ -74,6 +74,7 @@ const checkExpandedButton = () => {
   }
   return false;
 }
+
 const render = (array) => {
   list.innerHTML = '';
   array.forEach(elem => {
