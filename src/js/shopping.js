@@ -82,11 +82,10 @@ shoppingBoxContainer.addEventListener('click', (event) => {
     }
   }
 });
-console.log(itemId);
+
 function removeBookFromShoppingList(itemId) {
   // Знаходимо індекс книги за itemId
   const indexToRemove = parsedSettings.findIndex(item => item._id === itemId);
-console.log(parsedSettings);
   if (indexToRemove !== -1) {
     // Видаляємо тільки вибрану книгу за індексом
     parsedSettings.splice(indexToRemove, 1);
