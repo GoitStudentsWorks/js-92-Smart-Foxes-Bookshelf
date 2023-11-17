@@ -90,6 +90,7 @@
 }
 
 .list-item__image {
+  max-width: 134px;
   height: 32px;
   display: flex;
   align-items: center;
@@ -104,7 +105,7 @@
 }
 
 .list-item__image>img:hover {
-  filter: brightness(none) invert(0);
+  filter: none;
 }
 
 .list-item span {
