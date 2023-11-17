@@ -74,7 +74,6 @@ const checkExpandedButton = () => {
   }
   return false;
 }
-
 const render = (array) => {
   list.innerHTML = '';
   array.forEach(elem => {
