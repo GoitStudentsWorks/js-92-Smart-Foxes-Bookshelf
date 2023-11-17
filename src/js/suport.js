@@ -82,7 +82,7 @@ const render = (array) => {
       <div class="list-item">
         <span>${elem.id}</span>
         <a href="${elem.url}" class="list-item__image" target="_blank">
-          <img class="number-icon icon" src="${elem.img}" alt="${elem.title}">
+          <img class="number-icon" src="${elem.img}" alt="${elem.title}">
         </a>
       </div>
     `;

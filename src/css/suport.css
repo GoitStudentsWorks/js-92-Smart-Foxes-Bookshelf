@@ -12,20 +12,22 @@
 
 .title {
   color: #FFF;
-
-  font-family: DM Sans;
+  width: 176px;
+  height: 28px;
+  color: #FFF;
   font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 28px;
   /* 116.667% */
   letter-spacing: -0.96px;
+  margin-right: 12px;
 }
 
 .wrap-title {
+  width: 208px;
+  height: 32px;
   display: flex;
-
-  gap: 12px;
+  align-items: center;
+  justify-content: start;
   margin-bottom: 30px;
 }
 
@@ -64,8 +66,13 @@
   transform: rotate(180deg);
 }
 
+.card__gerb {
+  width: 20px;
+  height: 32px;
+}
+
 .icon {
-  width: 100px;
+  width: 20px;
 }
 
 
@@ -74,10 +81,6 @@
   flex-direction: column;
   /* row-gap: 20px; */
   gap: 20px;
-}
-
-.list:last-child {
-  border: 2px solid orange;
 }
 
 .list-item {
