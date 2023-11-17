@@ -23,6 +23,7 @@ button {
     transform: translate(-50%, -50%) scale(1);
     padding: 40px 24px;
     width: 335px;
+    max-height: 90vh;
     border-radius: 18px;
     border: 2px solid var(--border-modal-form);
     background: var(--bg-modal-form);

@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
     } else {
       suportEl.classList.add('is-hidden');
     };
-  }, 1000);
+  }, 250);
 });
 
 const LOCAL_KEY = localStorage.getItem('shoppingList');
