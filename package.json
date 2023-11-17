@@ -6,7 +6,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build --base=/Smart-Foxes-Bookshelf/",
+    "build": "vite build --base=/js-92-Smart-Foxes-Bookshelf/",
     "preview": "vite preview"
   },
   "devDependencies": {
