@@ -9,7 +9,6 @@
   padding: 25px 40px;
   position: relative;
 }
-
 .title {
   color: #FFF;
 
@@ -71,6 +70,7 @@ margin: 0 auto;
 .expand-btn.expanded > img {
   transform: rotate(180deg);
 }
+
 .icon {
   /* стили для иконки */
   width: 24px;
